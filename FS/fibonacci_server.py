@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/register', methods=['PUT'])
 def register():
     content = request.json
-    as_ip = content.get('as_ip', "172.18.0.4")  # Get from JSON or use default
+    as_ip = content.get('as_ip', "172.19.0.4")  # Get from JSON or use default
     as_port = content.get('as_port', 53533)  # Get from JSON or use default
 
     registration_details = json.dumps(content).encode('utf-8')
